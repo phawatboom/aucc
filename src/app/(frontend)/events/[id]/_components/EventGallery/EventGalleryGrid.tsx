@@ -1,3 +1,4 @@
+import { PayloadImage } from '@/components/PayloadImage'
 import { GalleryDTO, getGalleryByTag } from '@/queries/gallery'
 
 interface EventGalleryGridProps {
@@ -59,15 +60,13 @@ export async function EventGalleryGrid({ tagName }: EventGalleryGridProps) {
           className={`${idx >= 2 ? 'hidden lg:flex' : 'flex'} flex-col gap-2 ${idx % 2 === 0 ? 'justify-start' : 'justify-end'}`}
         >
           {col.map((item, i) => {
-            const image = item.image as { url: string; alt?: string }
             return (
-              <img
+              <div
                 key={`${item.id}-${idx}-${i}`}
-                src={image.url}
-                alt={image.alt || `Gallery image ${i + 1}`}
-                className={`h-auto w-full object-cover ${i >= 2 ? 'hidden lg:block' : ''}`}
-                loading="lazy"
-              />
+                className={`relative h-auto w-full ${i >= 2 ? 'hidden lg:block' : ''}`}
+              >
+                <PayloadImage media={item.image} className="object-cover" />
+              </div>
             )
           })}
         </div>
