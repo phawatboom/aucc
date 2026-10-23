@@ -39,8 +39,3 @@ This was a collaborative WDCC project. See the [2025 team roster](../README.md#2
 
 **Repository safety:** This documentation adds no runtime behavior. It does not change deployment workflows, secrets, environment variables, live infrastructure or the original organization's repository.
 
-## Before using as portfolio evidence
-
-- Identify specific PRs or issues personally authored or reviewed.
-- Add a screenshot of the completed experience, only with the club's permission where required.
-- Confirm the exact launch and production history before making public availability claims.
